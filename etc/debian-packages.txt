@@ -1,0 +1,12 @@
+build-essential
+cmake
+freeglut3
+freeglut3-dev
+libboost-program-options-dev
+libboost-program-options1.74.0
+libglfw3
+libglfw3-dev
+libgtest-dev
+libopengl-dev
+libopengl0
+pkg-config
