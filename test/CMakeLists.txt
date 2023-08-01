@@ -1,4 +1,3 @@
-#find_package(Threads REQUIRED)
 find_package(GTest REQUIRED)
 
 add_executable(free_fall_sim_test
