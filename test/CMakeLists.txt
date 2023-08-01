@@ -1,6 +1,8 @@
 find_package(GTest REQUIRED)
 
-add_executable(free_fall_sim_test
+set(TEST_EXECUTABLE_NAME ${CMAKE_PROJECT_NAME}_test)
+
+add_executable(${TEST_EXECUTABLE_NAME}
 	src/free_fall_sim/app/ProgramOptions_test.cpp
 	src/free_fall_sim/body/SphericalBody1D_test.cpp
 	src/free_fall_sim/gravity/ConstantFieldGravitationalModel1D_test.cpp
@@ -10,11 +12,11 @@ add_executable(free_fall_sim_test
 
 include_directories(${GTEST_INCLUDE_DIRS})
 
-target_include_directories(free_fall_sim_test PRIVATE
+target_include_directories(${TEST_EXECUTABLE_NAME} PRIVATE
 	${CMAKE_SOURCE_DIR}/include
 )
 
-target_link_libraries(free_fall_sim_test
+target_link_libraries(${TEST_EXECUTABLE_NAME}
 	${CMAKE_CXX_STANDARD_LIBRARIES}
 	${GTEST_BOTH_LIBRARIES}
 	${CMAKE_THREAD_LIBS_INIT}
@@ -22,5 +24,5 @@ target_link_libraries(free_fall_sim_test
 
 include(GoogleTest)
 
-gtest_discover_tests(free_fall_sim_test)
+gtest_discover_tests(${TEST_EXECUTABLE_NAME})
 
