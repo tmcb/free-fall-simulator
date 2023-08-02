@@ -1,6 +1,6 @@
 find_package(GTest REQUIRED)
 
-set(TEST_EXECUTABLE_NAME ${CMAKE_PROJECT_NAME}_test)
+set(TEST_EXECUTABLE_NAME ${EXECUTABLE_NAME}_test)
 
 add_executable(${TEST_EXECUTABLE_NAME}
 	src/free_fall_sim/app/ProgramOptions_test.cpp

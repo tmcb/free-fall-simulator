@@ -5,13 +5,14 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wpedantic -Werror")
 
 project(free_fall_sim)
 
+set(EXECUTABLE_NAME ${CMAKE_PROJECT_NAME})
 set(SOURCES
 	src/gui/gui.cpp
 	src/gui/gui_main_loop.cpp
 	src/app/main.cpp
 )
 
-add_executable(free_fall_sim ${SOURCES})
+add_executable(${EXECUTABLE_NAME} ${SOURCES})
 
 if(CMAKE_SYSTEM_NAME MATCHES "Linux")
 	set(OpenGL_GL_PREFERENCE "LEGACY")
@@ -27,10 +28,10 @@ include_directories(
 	${OPENGL_INCLUDE_DIR}
 )
 
-target_include_directories(free_fall_sim PRIVATE ${CMAKE_SOURCE_DIR}/include)
+target_include_directories(${EXECUTABLE_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/include)
 
 target_link_libraries(
-	free_fall_sim
+	${EXECUTABLE_NAME}
 	${CMAKE_CXX_STANDARD_LIBRARIES}
 	${Boost_LIBRARIES}
 	${OPENGL_LIBRARIES}
