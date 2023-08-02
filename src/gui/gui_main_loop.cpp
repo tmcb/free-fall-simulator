@@ -13,9 +13,10 @@
 
 #ifdef __APPLE__
 #define GL_SILENCE_DEPRECATION 1
-#endif
-#include <GL/gl.h>
+#include <glut.h>
+#else
 #include <GL/glut.h>
+#endif
 
 #include <chrono>
 #include <cmath>

@@ -8,8 +8,10 @@
 
 #ifdef __APPLE__
 #define GL_SILENCE_DEPRECATION 1
-#endif
+#include <OpenGL/gl.h>
+#else
 #include <GL/gl.h>
+#endif
 
 #include <array>
 #include <cmath>
