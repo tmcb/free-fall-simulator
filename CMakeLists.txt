@@ -35,7 +35,6 @@ target_link_libraries(
 	${CMAKE_CXX_STANDARD_LIBRARIES}
 	${Boost_LIBRARIES}
 	${OPENGL_LIBRARIES}
-	${GLUT_LIBRARIES}
 	glfw  # FIXME cannot successfuly configure package GLFW; assume it is installed
 )
 
