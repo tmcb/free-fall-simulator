@@ -29,8 +29,6 @@ using namespace free_fall_sim::body;
 
 using namespace free_fall_sim::gravity;
 
-using namespace free_fall_sim::gui;
-
 void
 ResizeFramebufferCb(GLFWwindow* window, int width, int height)
 {
@@ -181,7 +179,7 @@ main(int argc, char *argv[])
   while (!glfwWindowShouldClose(window))
   {
     // FIXME simulation breaks for time steps >= 0.5f
-    DoGUIMainLoop(gravitationalModel, body, time, programOptions.timeStep, programOptions.fluidDensity);
+    app::gui::DoGUIMainLoop(gravitationalModel, body, time, programOptions.timeStep, programOptions.fluidDensity);
     glFlush();
     glfwSwapBuffers(window);
     glfwPollEvents();

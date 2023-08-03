@@ -17,7 +17,7 @@
 #include <cmath>
 #include <numbers>
 
-namespace free_fall_sim
+namespace app
 {
 
 namespace gui
