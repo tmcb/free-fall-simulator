@@ -4,7 +4,7 @@
  * @copyright GNU General Public License, Version 3 or later
  */
 
-#include <free_fall_sim/gui/gui.h>
+#include "./gui.h"
 
 #ifdef __APPLE__
 #define GL_SILENCE_DEPRECATION 1
