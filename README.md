@@ -22,6 +22,12 @@ A list containing the required packages is available at `etc/macos-brew-packages
 
     xargs -J@ brew install @ < ./etc/macos-brew-packages.txt
 
+### Nix (NixOS 23.05 & MacOS Ventura + Nix)
+
+This project supports `nix-shell`.  If you wish to start a development shell, run
+
+    nix-shell ./etc/shell.nix
+
 ## Build
 
 The commands below were tested on `bash`.  Please adapt them to your shell accordingly.
