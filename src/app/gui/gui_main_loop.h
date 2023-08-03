@@ -11,7 +11,7 @@
 #include <free_fall_sim/body/SphericalBody1D.h>
 #include <free_fall_sim/gravity/GravitationalModel1D.h>
 
-namespace free_fall_sim
+namespace app
 {
 
 namespace gui
@@ -22,8 +22,8 @@ namespace gui
  */
 int
 DoGUIMainLoop(
-  gravity::GravitationalModel1D<float> const & gravitationalModel,
-  body::SphericalBody1D<float> & body,
+  free_fall_sim::gravity::GravitationalModel1D<float> const & gravitationalModel,
+  free_fall_sim::body::SphericalBody1D<float> & body,
   float & time,
   float timeStep,
   float fluidDensity);

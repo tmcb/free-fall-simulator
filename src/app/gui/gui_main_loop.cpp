@@ -22,22 +22,16 @@
 #include <chrono>
 #include <cmath>
 
-namespace free_fall_sim
+namespace app
 {
 
 namespace gui
 {
 
-using namespace body;
-
-using namespace gravity;
-
-using namespace simulation;
-
 int
 DoGUIMainLoop(
-  GravitationalModel1D<float> const & gravitationalModel,
-  SphericalBody1D<float> & body,
+  free_fall_sim::gravity::GravitationalModel1D<float> const & gravitationalModel,
+  free_fall_sim::body::SphericalBody1D<float> & body,
   float & time,
   float timeStep,
   float fluidDensity)
@@ -92,7 +86,7 @@ DoGUIMainLoop(
   // XXX the simulation will not skip any steps, this might introduce a time drift
   while (lastUpdateDelta.count() >= timeStep)
   {
-    SimulateStep(gravitationalModel, body, fluidDensity, timeStep);
+    free_fall_sim::simulation::SimulateStep(gravitationalModel, body, fluidDensity, timeStep);
     lastUpdateDelta -= std::chrono::duration<float>(timeStep);
     time += timeStep;
   }

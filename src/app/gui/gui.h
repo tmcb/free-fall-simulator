@@ -8,7 +8,7 @@
 
 #pragma once
 
-namespace free_fall_sim
+namespace app
 {
 
 namespace gui
