@@ -7,8 +7,8 @@ project(free_fall_sim)
 
 set(EXECUTABLE_NAME ${CMAKE_PROJECT_NAME})
 set(SOURCES
-	src/gui/gui.cpp
-	src/gui/gui_main_loop.cpp
+	src/app/gui/gui.cpp
+	src/app/gui/gui_main_loop.cpp
 	src/app/main.cpp
 )
 

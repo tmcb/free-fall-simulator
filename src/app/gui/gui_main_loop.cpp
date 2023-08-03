@@ -4,11 +4,12 @@
  * @copyright GNU General Public License, Version 3 or later
  */
 
-#include <free_fall_sim/gui/gui_main_loop.h>
+#include "./gui_main_loop.h"
+
+#include "./gui.h"
 
 #include <free_fall_sim/body/SphericalBody1D.h>
 #include <free_fall_sim/gravity/GravitationalModel1D.h>
-#include <free_fall_sim/gui/gui.h>
 #include <free_fall_sim/simulation/simulation.h>
 
 #ifdef __APPLE__
