@@ -29,7 +29,7 @@ public:
   : m_gravitationalAcceleration{gravitationalAcceleration}
   {}
 
-  [[nodiscard]] inline T
+  [[nodiscard]] T
   ComputeWeightForce(T bodyMass) const;
 
 private:

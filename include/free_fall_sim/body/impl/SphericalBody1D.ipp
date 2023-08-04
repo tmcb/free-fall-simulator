@@ -15,7 +15,7 @@ namespace body
 {
 
 template<typename T, typename U>
-inline void
+void
 SphericalBody1D<T, U>::ApplyForce(T force, T timeDelta)
 {
   m_acceleration = force / m_mass;
@@ -32,49 +32,49 @@ SphericalBody1D<T, U>::ApplyForce(T force, T timeDelta)
 }
 
 template<typename T, typename U>
-[[nodiscard]] inline T
+[[nodiscard]] T
 SphericalBody1D<T, U>::GetRadius() const
 {
   return m_radius;
 }
 
 template<typename T, typename U>
-[[nodiscard]] inline T
+[[nodiscard]] T
 SphericalBody1D<T, U>::GetMass() const
 {
   return m_mass;
 }
 
 template<typename T, typename U>
-[[nodiscard]] inline T
+[[nodiscard]] T
 SphericalBody1D<T, U>::GetDragCoefficient() const
 {
   return m_dragCoefficient;
 }
 
 template<typename T, typename U>
-[[nodiscard]] inline T
+[[nodiscard]] T
 SphericalBody1D<T, U>::GetAcceleration() const
 {
   return m_acceleration;
 }
 
 template<typename T, typename U>
-[[nodiscard]] inline T
+[[nodiscard]] T
 SphericalBody1D<T, U>::GetVelocity() const
 {
   return m_velocity;
 }
 
 template<typename T, typename U>
-[[nodiscard]] inline T
+[[nodiscard]] T
 SphericalBody1D<T, U>::GetPosition() const
 {
   return m_position;
 }
 
 template<typename T, typename U>
-[[nodiscard]] inline T
+[[nodiscard]] T
 SphericalBody1D<T, U>::ComputeReferenceArea() const
 {
   return std::numbers::pi_v<T> * m_radius * m_radius;
