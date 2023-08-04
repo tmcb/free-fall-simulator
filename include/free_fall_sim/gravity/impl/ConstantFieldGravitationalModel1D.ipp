@@ -15,7 +15,7 @@ namespace gravity
 {
 
 template<typename T, typename U>
-[[nodiscard]] inline T
+[[nodiscard]] T
 ConstantFieldGravitationalModel1D<T, U>::ComputeWeightForce(T bodyMass) const
 {
   return m_gravitationalAcceleration * bodyMass;

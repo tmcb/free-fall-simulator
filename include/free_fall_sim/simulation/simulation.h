@@ -34,7 +34,7 @@ SimulateStep(
  * Runs a full simulation based on simulation parameters.
  */
 template<typename T, typename = std::enable_if_t<std::is_floating_point_v<T>>>
-inline void
+void
 Simulate(
   gravity::GravitationalModel1D<T> gravitationalModel,
   body::SphericalBody1D<T> body,
@@ -46,7 +46,7 @@ Simulate(
  * Runs a full simulation based on simulation parameters.
  */
 template<typename T, typename G, typename = std::enable_if_t<std::is_floating_point_v<T>>>
-inline void
+void
 Simulate(G gravitationalModel, body::SphericalBody1D<T> body, T fluidDensity, T timeStep, T timeFinish);
 
 }

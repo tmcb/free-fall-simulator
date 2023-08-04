@@ -47,7 +47,7 @@ SimulateStep(GravitationalModel1D<T> const & gravitationalModel, SphericalBody1D
 }
 
 template<typename T, typename>
-inline void
+void
 Simulate(GravitationalModel1D<T> gravitationalModel, SphericalBody1D<T> body, T fluidDensity, T timeStep, T timeFinish)
 {
   for (auto time = static_cast<T>(0.); time < timeFinish; time += timeStep)
@@ -62,7 +62,7 @@ Simulate(GravitationalModel1D<T> gravitationalModel, SphericalBody1D<T> body, T 
 }
 
 template<typename T, typename G, typename>
-inline void
+void
 Simulate(G gravitationalModel, SphericalBody1D<T> body, T fluidDensity, T timeStep, T timeFinish)
 {
   return Simulate(

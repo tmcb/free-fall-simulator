@@ -35,28 +35,28 @@ public:
   , m_position{position}
   {}
 
-  inline void
+  void
   ApplyForce(T force, T timeDelta);
 
-  [[nodiscard]] inline T
+  [[nodiscard]] T
   GetRadius() const;
   
-  [[nodiscard]] inline T
+  [[nodiscard]] T
   GetMass() const;
 
-  [[nodiscard]] inline T
+  [[nodiscard]] T
   GetDragCoefficient() const;
 
-  [[nodiscard]] inline T
+  [[nodiscard]] T
   GetAcceleration() const;
 
-  [[nodiscard]] inline T
+  [[nodiscard]] T
   GetVelocity() const;
 
-  [[nodiscard]] inline T
+  [[nodiscard]] T
   GetPosition() const;
 
-  [[nodiscard]] inline T
+  [[nodiscard]] T
   ComputeReferenceArea() const;
 
 private:
