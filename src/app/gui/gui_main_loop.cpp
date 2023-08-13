@@ -4,13 +4,13 @@
  * @copyright GNU General Public License, Version 3 or later
  */
 
-#include "./gui_main_loop.h"
+#include "./gui_main_loop.hpp"
 
-#include "./gui.h"
+#include "./gui.hpp"
 
-#include <free_fall_sim/body/SphericalBody1D.h>
-#include <free_fall_sim/gravity/GravitationalModel1D.h>
-#include <free_fall_sim/simulation/simulation.h>
+#include <free_fall_sim/body/SphericalBody1D.hpp>
+#include <free_fall_sim/gravity/GravitationalModel1D.hpp>
+#include <free_fall_sim/simulation/simulation.hpp>
 
 #ifdef __APPLE__
 #define GL_SILENCE_DEPRECATION 1

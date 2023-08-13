@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <free_fall_sim/body/SphericalBody1D.h>
+#include <free_fall_sim/body/SphericalBody1D.hpp>
 
 namespace free_fall_sim
 {

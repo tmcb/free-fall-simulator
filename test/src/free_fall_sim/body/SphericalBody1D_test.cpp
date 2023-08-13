@@ -4,7 +4,7 @@
  * @copyright GNU General Public License, Version 3 or later
  */
 
-#include <free_fall_sim/body/SphericalBody1D.h>
+#include <free_fall_sim/body/SphericalBody1D.hpp>
 
 #include <gtest/gtest.h>
 
