@@ -1,8 +1,8 @@
 #pragma once
 
-#include <free_fall_sim/simulation/simulation.h>
+#include <free_fall_sim/simulation/simulation.hpp>
 
-#include <free_fall_sim/simulation/detail/simulation.h>
+#include <free_fall_sim/simulation/detail/simulation.hpp>
 
 #include <iostream>
 #include <utility>

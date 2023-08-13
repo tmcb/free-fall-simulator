@@ -8,8 +8,8 @@
 
 #pragma once
 
-#include <free_fall_sim/body/SphericalBody1D.h>
-#include <free_fall_sim/gravity/GravitationalModel1D.h>
+#include <free_fall_sim/body/SphericalBody1D.hpp>
+#include <free_fall_sim/gravity/GravitationalModel1D.hpp>
 
 #include <type_traits>
 
@@ -53,4 +53,4 @@ Simulate(G gravitationalModel, body::SphericalBody1D<T> body, T fluidDensity, T 
 
 }
 
-#include "./impl/simulation.ipp"
+#include "./impl/simulation.inl"

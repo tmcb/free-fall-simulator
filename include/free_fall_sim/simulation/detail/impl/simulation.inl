@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <free_fall_sim/simulation/detail/simulation.h>
+#include <free_fall_sim/simulation/detail/simulation.hpp>
 
 namespace free_fall_sim
 {

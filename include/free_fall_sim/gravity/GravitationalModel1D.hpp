@@ -8,8 +8,8 @@
 
 #pragma once
 
-#include <free_fall_sim/gravity/ConstantFieldGravitationalModel1D.h>
-#include <free_fall_sim/gravity/NewtonianGravitationalModel1D.h>
+#include <free_fall_sim/gravity/ConstantFieldGravitationalModel1D.hpp>
+#include <free_fall_sim/gravity/NewtonianGravitationalModel1D.hpp>
 
 #include <type_traits>
 #include <variant>

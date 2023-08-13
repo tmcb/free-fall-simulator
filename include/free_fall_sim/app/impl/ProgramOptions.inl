@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <free_fall_sim/app/ProgramOptions.h>
+#include <free_fall_sim/app/ProgramOptions.hpp>
 
 namespace free_fall_sim
 {

@@ -4,7 +4,7 @@
  * @copyright GNU General Public License, Version 3 or later
  */
 
-#include "./gui.h"
+#include "./gui.hpp"
 
 #ifdef __APPLE__
 #define GL_SILENCE_DEPRECATION 1

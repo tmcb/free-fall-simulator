@@ -76,4 +76,4 @@ ValidateProgramOptions(ProgramOptions<T> const & programOptions);
 
 }
 
-#include "./impl/ProgramOptions.ipp"
+#include "./impl/ProgramOptions.inl"

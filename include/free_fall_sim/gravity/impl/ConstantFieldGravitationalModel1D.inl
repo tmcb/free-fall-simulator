@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <free_fall_sim/gravity/ConstantFieldGravitationalModel1D.h>
+#include <free_fall_sim/gravity/ConstantFieldGravitationalModel1D.hpp>
 
 namespace free_fall_sim
 {

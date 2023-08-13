@@ -4,7 +4,7 @@
  * @copyright GNU General Public License, Version 3 or later
  */
 
-#include <free_fall_sim/app/ProgramOptions.h>
+#include <free_fall_sim/app/ProgramOptions.hpp>
 
 #include <gtest/gtest.h>
 
