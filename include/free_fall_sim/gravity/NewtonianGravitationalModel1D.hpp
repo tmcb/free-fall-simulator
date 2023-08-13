@@ -47,4 +47,4 @@ private:
 
 }
 
-#include "./impl/NewtonianGravitationalModel1D.ipp"
+#include "./impl/NewtonianGravitationalModel1D.inl"

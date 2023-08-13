@@ -41,4 +41,4 @@ private:
 
 }
 
-#include "./impl/ConstantFieldGravitationalModel1D.ipp"
+#include "./impl/ConstantFieldGravitationalModel1D.inl"

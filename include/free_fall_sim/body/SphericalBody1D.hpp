@@ -78,4 +78,4 @@ private:
 
 }
 
-#include "./impl/SphericalBody1D.ipp"
+#include "./impl/SphericalBody1D.inl"

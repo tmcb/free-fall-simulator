@@ -53,4 +53,4 @@ Simulate(G gravitationalModel, body::SphericalBody1D<T> body, T fluidDensity, T 
 
 }
 
-#include "./impl/simulation.ipp"
+#include "./impl/simulation.inl"

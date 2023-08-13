@@ -27,4 +27,4 @@ ComputeDragForce(T fluidDensity, T bodyDragCoefficient, T bodyVelocity, T bodyRe
 
 }
 
-#include "./impl/simulation.ipp"
+#include "./impl/simulation.inl"
