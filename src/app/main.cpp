@@ -30,7 +30,7 @@ using namespace free_fall_sim::body;
 using namespace free_fall_sim::gravity;
 
 void
-ResizeFramebufferCb(GLFWwindow* window, int width, int height)
+ResizeFramebufferCb(GLFWwindow * window, int width, int height)
 {
   (void)window;
   glViewport(0, 0, width, height);
@@ -94,7 +94,7 @@ ConfigureProgramOptions(ProgramOptions<T> & programOptions)
 }
 
 int
-main(int argc, char *argv[])
+main(int argc, char * argv[])
 {
   namespace po = ::boost::program_options;
 
@@ -113,14 +113,14 @@ main(int argc, char *argv[])
     std::cerr << std::endl;
     std::cerr << optionsDescription << std::endl;
 
-    std::exit(1);
+    std::exit(EXIT_FAILURE);
   }
 
   if (variablesMap.count("help"))
   {
     std::cerr << optionsDescription << std::endl;
 
-    std::exit(1);
+    std::exit(EXIT_FAILURE);
   }
 
   try
@@ -131,21 +131,21 @@ main(int argc, char *argv[])
   {
     std::cerr << "Error: " << e.what() << std::endl;
 
-    std::exit(1);
+    std::exit(EXIT_FAILURE);
   }
 
   if (!glfwInit())
   {
-    std::exit(1);
+    std::exit(EXIT_FAILURE);
   }
 
-  GLFWwindow* window = glfwCreateWindow(800, 600, "free fall simulator", nullptr, nullptr);
+  GLFWwindow * window = glfwCreateWindow(800, 600, "free fall simulator", nullptr, nullptr);
 
   if (!window)
   {
     glfwTerminate();
 
-    std::exit(1);
+    std::exit(EXIT_FAILURE);
   }
 
   glfwWindowHint(GLFW_DOUBLEBUFFER, GLFW_TRUE);
@@ -193,5 +193,5 @@ main(int argc, char *argv[])
 
   glfwTerminate();
 
-  return 0;
+  return EXIT_SUCCESS;
 }
