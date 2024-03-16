@@ -21,7 +21,7 @@ namespace app
 /**
  * Holds the simulation program options.
  */
-template <typename T, typename = std::enable_if_t<std::is_floating_point_v<T>>>
+template<typename T, typename = std::enable_if_t<std::is_floating_point_v<T>>>
 struct ProgramOptions
 {
   T ballDragCoefficient;

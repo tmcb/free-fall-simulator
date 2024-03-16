@@ -23,9 +23,7 @@ template<typename T, typename = std::enable_if_t<std::is_floating_point_v<T>>>
 class NewtonianGravitationalModel1D
 {
 public:
-
-  explicit
-  NewtonianGravitationalModel1D(T gravitationalConstant, T planetMass, T planetRadius)
+  explicit NewtonianGravitationalModel1D(T gravitationalConstant, T planetMass, T planetRadius)
   : m_gravitationalConstant{gravitationalConstant}
   , m_planetMass{planetMass}
   , m_planetRadius{planetRadius}
@@ -35,7 +33,6 @@ public:
   ComputeWeightForce(T bodyMass, T bodyHeight) const;
 
 private:
-
   T const m_gravitationalConstant;
 
   T const m_planetMass;

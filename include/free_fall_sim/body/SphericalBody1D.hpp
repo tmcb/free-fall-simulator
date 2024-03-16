@@ -24,9 +24,7 @@ template<typename T, typename = std::enable_if_t<std::is_floating_point_v<T>>>
 class SphericalBody1D
 {
 public:
-
-  explicit
-  SphericalBody1D(T radius, T mass, T dragCoefficient, T acceleration, T velocity, T position)
+  explicit SphericalBody1D(T radius, T mass, T dragCoefficient, T acceleration, T velocity, T position)
   : m_radius{radius}
   , m_mass{mass}
   , m_dragCoefficient{dragCoefficient}
@@ -40,7 +38,7 @@ public:
 
   [[nodiscard]] T
   GetRadius() const;
-  
+
   [[nodiscard]] T
   GetMass() const;
 
@@ -60,7 +58,6 @@ public:
   ComputeReferenceArea() const;
 
 private:
-
   T const m_radius;
 
   T const m_mass;

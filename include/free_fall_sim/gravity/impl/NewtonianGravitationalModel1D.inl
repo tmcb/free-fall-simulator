@@ -14,7 +14,6 @@ namespace free_fall_sim
 namespace gravity
 {
 
-
 template<typename T, typename U>
 [[nodiscard]] T
 NewtonianGravitationalModel1D<T, U>::ComputeWeightForce(T bodyMass, T bodyHeight) const

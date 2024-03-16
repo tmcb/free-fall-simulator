@@ -23,9 +23,7 @@ template<typename T, typename = std::enable_if_t<std::is_floating_point_v<T>>>
 class ConstantFieldGravitationalModel1D
 {
 public:
-
-  explicit
-  ConstantFieldGravitationalModel1D(T gravitationalAcceleration)
+  explicit ConstantFieldGravitationalModel1D(T gravitationalAcceleration)
   : m_gravitationalAcceleration{gravitationalAcceleration}
   {}
 
@@ -33,7 +31,6 @@ public:
   ComputeWeightForce(T bodyMass) const;
 
 private:
-
   T const m_gravitationalAcceleration;
 };
 
