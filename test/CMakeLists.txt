@@ -10,6 +10,11 @@ add_executable(${TEST_EXECUTABLE_NAME}
 	src/free_fall_sim/simulation/simulation_test.cpp
 )
 
+set_target_properties(${TEST_EXECUTABLE_NAME}
+	PROPERTIES
+	DEBUG_POSTFIX "_D"
+)
+
 include_directories(${GTEST_INCLUDE_DIRS})
 
 target_include_directories(${TEST_EXECUTABLE_NAME} PRIVATE

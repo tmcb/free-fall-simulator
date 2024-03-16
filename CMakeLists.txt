@@ -20,6 +20,11 @@ set(SOURCES
 
 add_executable(${EXECUTABLE_NAME} ${SOURCES})
 
+set_target_properties(${EXECUTABLE_NAME}
+	PROPERTIES
+	DEBUG_POSTFIX "_D"
+)
+
 if(CMAKE_SYSTEM_NAME MATCHES "Linux")
 	set(OpenGL_GL_PREFERENCE "LEGACY")
 endif()
