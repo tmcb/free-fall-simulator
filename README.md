@@ -34,7 +34,7 @@ The commands below were tested on `bash`.  Please adapt them to your shell accor
 
 In order to set up the build directory, run
 
-    (mkdir build && cd build && cmake ..)
+    (mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Release ..)
 
 ### Full build
 
