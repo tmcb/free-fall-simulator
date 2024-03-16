@@ -52,25 +52,30 @@ DoGUIMainLoop(
   glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
   glEnable(GL_DEPTH_TEST);
-  glEnable(GL_LIGHTING);      // Enable lighting
-  glEnable(GL_LIGHT0);        // Use light source 0
+  glEnable(GL_LIGHTING);  // Enable lighting
+  glEnable(GL_LIGHT0);  // Use light source 0
 
   float ballHeight = body.GetPosition() * scaleFactor;
-  GLfloat lightPosition[] =
-    {0.0f, 0.5f * (ballInitialHeight + ballRadius), std::sqrt(2.0f) * (ballInitialHeight + 2.0f * ballRadius), 0.0f};
+  GLfloat lightPosition[] = {
+    0.0f, 0.5f * (ballInitialHeight + ballRadius), std::sqrt(2.0f) * (ballInitialHeight + 2.0f * ballRadius), 0.0f};
 
   glLightfv(GL_LIGHT0, GL_POSITION, lightPosition);
   glMatrixMode(GL_MODELVIEW);
   glLoadIdentity();
   gluLookAt(
     // eye
-    0.0f, 0.5f * (ballInitialHeight + ballRadius), std::sqrt(2.0f) * (ballInitialHeight + 2.0f * ballRadius),
+    0.0f,
+    0.5f * (ballInitialHeight + ballRadius),
+    std::sqrt(2.0f) * (ballInitialHeight + 2.0f * ballRadius),
     // at
-    0.0f, 0.5f * (ballInitialHeight + ballRadius), 0.0f,
+    0.0f,
+    0.5f * (ballInitialHeight + ballRadius),
+    0.0f,
     // up
-    0.0f, 1.0f, 0.0f
-  );
-  glColor3f(1.0f, 0.0f, 0.0f); // Set sphere color to red (R, G, B)
+    0.0f,
+    1.0f,
+    0.0f);
+  glColor3f(1.0f, 0.0f, 0.0f);  // Set sphere color to red (R, G, B)
   DrawCheckeredPlane(4.0f * ballRadius, 2);
   glPushMatrix();
   glTranslatef(0.0f, ballHeight, 0.0f);

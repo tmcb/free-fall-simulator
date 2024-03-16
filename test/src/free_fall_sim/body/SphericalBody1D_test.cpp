@@ -15,7 +15,6 @@ using namespace free_fall_sim::body;
 TEST(SphericalBody1DTest, ConstructorTest)
 {
   SphericalBody1D body{0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
-
 }
 
 TEST(SphericalBody1DTest, GetRadiusTest)

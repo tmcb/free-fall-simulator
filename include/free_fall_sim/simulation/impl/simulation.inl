@@ -65,8 +65,7 @@ template<typename T, typename G, typename>
 void
 Simulate(G gravitationalModel, SphericalBody1D<T> body, T fluidDensity, T timeStep, T timeFinish)
 {
-  return Simulate(
-    GravitationalModel1D<T>{std::move(gravitationalModel)}, body, fluidDensity, timeStep, timeFinish);
+  return Simulate(GravitationalModel1D<T>{std::move(gravitationalModel)}, body, fluidDensity, timeStep, timeFinish);
 }
 
 }

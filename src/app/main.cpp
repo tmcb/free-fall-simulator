@@ -40,7 +40,7 @@ ResizeFramebufferCb(GLFWwindow * window, int width, int height)
   gluPerspective(45.0f, static_cast<double>(width) / static_cast<double>(height), 1.0f, 5000.0f);
 }
 
-template <typename T, typename = std::enable_if_t<std::is_floating_point_v<T>>>
+template<typename T, typename = std::enable_if_t<std::is_floating_point_v<T>>>
 boost::program_options::options_description
 ConfigureProgramOptions(ProgramOptions<T> & programOptions)
 {
@@ -48,6 +48,8 @@ ConfigureProgramOptions(ProgramOptions<T> & programOptions)
 
   po::options_description description("Options");
 
+  // clang-format off
+  // ... as it removes the line breaks in-between the chained calls
   description.add_options()
     ("help,h", "produce help message")
     ("ball-drag-coefficient",
@@ -89,6 +91,7 @@ ConfigureProgramOptions(ProgramOptions<T> & programOptions)
     ("time-step",
       po::value<T>(&programOptions.timeStep)->default_value(0.02f),
       "set time step (\\Delta t)");
+  // clang-format on
 
   return description;
 }
@@ -105,9 +108,9 @@ main(int argc, char * argv[])
   try
   {
     po::store(po::parse_command_line(argc, argv, optionsDescription), variablesMap);
-    po::notify(variablesMap);    
+    po::notify(variablesMap);
   }
-  catch(po::error & e)
+  catch (po::error & e)
   {
     std::cerr << "Error: " << e.what() << std::endl;
     std::cerr << std::endl;
@@ -127,7 +130,7 @@ main(int argc, char * argv[])
   {
     ValidateProgramOptions(programOptions);
   }
-  catch(InvalidProgramOptionError & e)
+  catch (InvalidProgramOptionError & e)
   {
     std::cerr << "Error: " << e.what() << std::endl;
 
@@ -162,10 +165,11 @@ main(int argc, char * argv[])
   // XXX far plane is hardcoded, `DoGUIMainLoop()` does the scaling
   gluPerspective(45.0f, static_cast<float>(width) / static_cast<float>(height), 1.0f, 5000.0);
 
-  auto gravitationalModel = programOptions.gravityModel == "constant" ?
-    GravitationalModel1D<float>{ConstantFieldGravitationalModel1D{programOptions.gravityAcceleration}} :
-    GravitationalModel1D<float>{NewtonianGravitationalModel1D{
-       programOptions.gravityUniversalConstant, programOptions.planetMass, programOptions.planetRadius}};
+  auto gravitationalModel =
+    programOptions.gravityModel == "constant" ?
+      GravitationalModel1D<float>{ConstantFieldGravitationalModel1D{programOptions.gravityAcceleration}} :
+      GravitationalModel1D<float>{NewtonianGravitationalModel1D{
+        programOptions.gravityUniversalConstant, programOptions.planetMass, programOptions.planetRadius}};
   auto body = SphericalBody1D{
     programOptions.ballRadius,
     programOptions.ballMass,

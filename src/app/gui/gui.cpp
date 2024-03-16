@@ -74,7 +74,8 @@ DrawCheckeredPlane(float size, int numDivisions)
   {
     for (int j = -numDivisions / 2; j < numDivisions / 2; ++j)
     {
-      auto getTileDiffuseColor = [i, j]() -> std::array<GLfloat, 4> {
+      auto getTileDiffuseColor = [i, j]() -> std::array<GLfloat, 4>
+      {
         if ((i + j) % 2 == 0)
         {
           return {0.8f, 0.8f, 0.8f, 1.0f};
