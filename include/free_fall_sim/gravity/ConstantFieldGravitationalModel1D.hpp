@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include <type_traits>
+#include <limits>
 
 namespace free_fall_sim
 {
@@ -19,7 +19,7 @@ namespace gravity
 /**
  * A gravitational model with constant acceleration.
  */
-template<typename T, typename = std::enable_if_t<std::is_floating_point_v<T>>>
+template<typename T, typename = std::enable_if_t<std::numeric_limits<T>::is_iec559>>
 class ConstantFieldGravitationalModel1D
 {
 public:
