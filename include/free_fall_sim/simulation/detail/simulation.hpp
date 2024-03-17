@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <type_traits>
+#include <limits>
 
 namespace free_fall_sim
 {
@@ -17,7 +17,7 @@ namespace simulation
 namespace detail
 {
 
-template<typename T, typename = std::enable_if_t<std::is_floating_point_v<T>>>
+template<typename T, typename = std::enable_if_t<std::numeric_limits<T>::is_iec559>>
 [[nodiscard]] T
 ComputeDragForce(T fluidDensity, T bodyDragCoefficient, T bodyVelocity, T bodyReferenceArea);
 

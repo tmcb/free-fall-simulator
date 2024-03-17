@@ -11,7 +11,7 @@
 #include <free_fall_sim/gravity/ConstantFieldGravitationalModel1D.hpp>
 #include <free_fall_sim/gravity/NewtonianGravitationalModel1D.hpp>
 
-#include <type_traits>
+#include <limits>
 #include <variant>
 
 namespace free_fall_sim
@@ -23,7 +23,7 @@ namespace gravity
 /**
  * Variant that holds all supported gravitational models.
  */
-template<typename T, typename = std::enable_if_t<std::is_floating_point_v<T>>>
+template<typename T, typename = std::enable_if_t<std::numeric_limits<T>::is_iec559>>
 using GravitationalModel1D = std::variant<ConstantFieldGravitationalModel1D<T>, NewtonianGravitationalModel1D<T>>;
 
 }

@@ -40,7 +40,7 @@ ResizeFramebufferCb(GLFWwindow * window, int width, int height)
   gluPerspective(45.0f, static_cast<double>(width) / static_cast<double>(height), 1.0f, 5000.0f);
 }
 
-template<typename T, typename = std::enable_if_t<std::is_floating_point_v<T>>>
+template<typename T, typename = std::enable_if_t<std::numeric_limits<T>::is_iec559>>
 boost::program_options::options_description
 ConfigureProgramOptions(ProgramOptions<T> & programOptions)
 {

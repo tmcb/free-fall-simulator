@@ -8,8 +8,8 @@
 
 #pragma once
 
+#include <limits>
 #include <numbers>
-#include <type_traits>
 
 namespace free_fall_sim
 {
@@ -20,7 +20,7 @@ namespace body
 /**
  * An one-dimensional spherical body.
  */
-template<typename T, typename = std::enable_if_t<std::is_floating_point_v<T>>>
+template<typename T, typename = std::enable_if_t<std::numeric_limits<T>::is_iec559>>
 class SphericalBody1D
 {
 public:

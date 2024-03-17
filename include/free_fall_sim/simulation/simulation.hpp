@@ -11,7 +11,7 @@
 #include <free_fall_sim/body/SphericalBody1D.hpp>
 #include <free_fall_sim/gravity/GravitationalModel1D.hpp>
 
-#include <type_traits>
+#include <limits>
 
 namespace free_fall_sim
 {
@@ -22,7 +22,7 @@ namespace simulation
 /**
  * Runs a step of the simulation based on simulation parameters.
  */
-template<typename T, typename = std::enable_if_t<std::is_floating_point_v<T>>>
+template<typename T, typename = std::enable_if_t<std::numeric_limits<T>::is_iec559>>
 void
 SimulateStep(
   gravity::GravitationalModel1D<T> const & gravitationalModel,
@@ -33,7 +33,7 @@ SimulateStep(
 /**
  * Runs a full simulation based on simulation parameters.
  */
-template<typename T, typename = std::enable_if_t<std::is_floating_point_v<T>>>
+template<typename T, typename = std::enable_if_t<std::numeric_limits<T>::is_iec559>>
 void
 Simulate(
   gravity::GravitationalModel1D<T> gravitationalModel,
@@ -45,7 +45,7 @@ Simulate(
 /**
  * Runs a full simulation based on simulation parameters.
  */
-template<typename T, typename G, typename = std::enable_if_t<std::is_floating_point_v<T>>>
+template<typename T, typename G, typename = std::enable_if_t<std::numeric_limits<T>::is_iec559>>
 void
 Simulate(G gravitationalModel, body::SphericalBody1D<T> body, T fluidDensity, T timeStep, T timeFinish);
 

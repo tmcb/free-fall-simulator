@@ -8,9 +8,9 @@
 
 #pragma once
 
+#include <limits>
 #include <stdexcept>
 #include <string>
-#include <type_traits>
 
 namespace free_fall_sim
 {
@@ -21,7 +21,7 @@ namespace app
 /**
  * Holds the simulation program options.
  */
-template<typename T, typename = std::enable_if_t<std::is_floating_point_v<T>>>
+template<typename T, typename = std::enable_if_t<std::numeric_limits<T>::is_iec559>>
 struct ProgramOptions
 {
   T ballDragCoefficient;
