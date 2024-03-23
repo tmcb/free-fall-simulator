@@ -24,7 +24,7 @@ CreateCorrectProgramOptions()
   programOptions.ballRadius = 1.0;
   programOptions.fluidDensity = 1.2041;
   programOptions.gravityAcceleration = 9.807;
-  programOptions.gravityModel = std::string{"constant"};
+  programOptions.gravityModel = "constant";
   programOptions.gravityUniversalConstant = 6.6743e-11;
   programOptions.planetMass = 5.972e+24;
   programOptions.planetRadius = 6.371e+6;
@@ -142,9 +142,9 @@ TEST(ProgramOptionsTest, ValidateProgramOptionsGravityModelOKTest)
 {
   ProgramOptions programOptions = CreateCorrectProgramOptions();
 
-  programOptions.gravityModel = std::string{"constant"};
+  programOptions.gravityModel = "constant";
   EXPECT_NO_THROW(ValidateProgramOptions(programOptions));
-  programOptions.gravityModel = std::string{"newtonian"};
+  programOptions.gravityModel = "newtonian";
   EXPECT_NO_THROW(ValidateProgramOptions(programOptions));
 }
 
@@ -152,11 +152,11 @@ TEST(ProgramOptionsTest, ValidateProgramOptionsGravityModelWrongTest)
 {
   ProgramOptions programOptions = CreateCorrectProgramOptions();
 
-  programOptions.gravityModel = std::string{""};
+  programOptions.gravityModel = "";
   EXPECT_THROW(ValidateProgramOptions(programOptions), InvalidProgramOptionError);
-  programOptions.gravityModel = std::string{"\n"};
+  programOptions.gravityModel = "\n";
   EXPECT_THROW(ValidateProgramOptions(programOptions), InvalidProgramOptionError);
-  programOptions.gravityModel = std::string{"-"};
+  programOptions.gravityModel = "-";
   EXPECT_THROW(ValidateProgramOptions(programOptions), InvalidProgramOptionError);
 }
 
